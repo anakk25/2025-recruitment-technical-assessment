@@ -1,12 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    orange: {
+      main: '#ef6c00',
+    },
+  },
+});
 
 const Container = styled.div`
-  width: 100%;
   padding: 4px 16px;
   height: 55px;
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
 `
 
 const LogoContainer = styled.div`
@@ -30,18 +40,23 @@ const Title = styled.p`
   padding-top: 8px;
 `
 
-
+const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 export default function HeaderBar () {
   return (
-    <Container>
-      <LogoContainer>
-        <FreeRoomsLogo src={require("../assets/freeRoomsLogo.png")} />
-        <Title>Freerooms</Title>
-      </LogoContainer>
-      <div>
-        {/* <Button>Test</Button> */}
-      </div>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <LogoContainer>
+          <FreeRoomsLogo src={require("../assets/freeRoomsLogo.png")} />
+          <Title>Freerooms</Title>
+        </LogoContainer>
+        <ButtonContainer>
+          <Button variant="outlined" color="orange">Test</Button>
+        </ButtonContainer>
+      </Container>
+    </ThemeProvider>
   );
 }
