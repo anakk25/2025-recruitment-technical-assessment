@@ -12,9 +12,9 @@ import { orange } from '../constants.js';
 
 const Container = styled('div')({
   display: 'flex',
-  height: '60px',
+  height: '40px',
   justifyContent: 'space-between',
-  margin: '8px 0px',
+  margin: '16px 0px',
 });
 
 const StyledButton = styled(Button)({
