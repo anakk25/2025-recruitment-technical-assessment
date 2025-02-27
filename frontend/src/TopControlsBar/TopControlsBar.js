@@ -7,8 +7,6 @@ import sort from '../assets/sort.svg';
 import filter from '../assets/filter.svg';
 import { ReactComponent as Search } from '../assets/search.svg';
 import TextField from '@mui/material/TextField';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 
 const Container = styled('div')({
@@ -33,6 +31,10 @@ const ButtonText = styled('span')({
   marginLeft: '12px',
 });
 
+const inputStyles = {
+  width: '600px',
+}
+
 export default function TopControlsBar () {
   return (
     <ThemeProvider theme={theme}>
@@ -41,22 +43,20 @@ export default function TopControlsBar () {
         <img src={filter} alt="filter" />
         <ButtonText>Filters</ButtonText>
       </StyledButton>
-      <OutlinedInput
-        label="Search for a building..."
-        variant="outlined"
-        startAdornment={<InputAdornment>
-          <Search fill="#666666" />
-        </InputAdornment>}
+      <TextField
+        color="orange"
+        placeholder="Search for a building..."
+        style={inputStyles}
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search fill="#666666" />
+              </InputAdornment>
+            ),
+          }
+        }}
       />
-
-      <OutlinedInput
-        id="outlined-adornment-amount"
-        startAdornment={<InputAdornment>
-          <Search fill="#666666" />
-        </InputAdornment>}
-        label="Amount"
-      />
-
       <StyledButton variant="outlined" color="orange">
         <img src={sort} alt="sort" />
         <ButtonText>Sort</ButtonText>
