@@ -4,7 +4,7 @@ import HeaderBar from './HeaderBar/HeaderBar.js'
 import TopControlsBar from './TopControlsBar/TopControlsBar.js'
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/system';
-import BuildingCard from './BuildingCard/BuildingCard.js';
+import BuildingsContainer from './BuildingsContainer/BuildingsContainer.js';
 
 export const theme = createTheme({
   palette: {
@@ -24,7 +24,7 @@ function App() {
       <HeaderBar />
       <Container>
         <TopControlsBar />
-        <BuildingCard name="Anita" />
+        <BuildingsContainer />
       </Container>
     </>
   );

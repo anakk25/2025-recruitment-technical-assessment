@@ -7,7 +7,7 @@ import { ReactComponent as Map } from '../assets/map.svg';
 import { ReactComponent as GridView } from '../assets/grid-view.svg';
 import { ReactComponent as DarkMode } from '../assets/dark-mode.svg';
 import { theme } from '../App.js';
-import freeRooms from "../assets/freeRoomsLogo.png";
+import freeRooms from '../assets/freeRoomsLogo.png';
 
 const Container = styled('div')({
   padding: '4px 16px',
