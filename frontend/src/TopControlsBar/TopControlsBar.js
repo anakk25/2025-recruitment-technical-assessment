@@ -33,6 +33,10 @@ const ButtonText = styled('span')({
 
 const inputStyles = {
   width: '600px',
+
+  input: {
+    padding: '9px 14px',
+  }
 }
 
 export default function TopControlsBar () {
