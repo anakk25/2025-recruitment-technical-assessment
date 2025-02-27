@@ -31,13 +31,13 @@ const ButtonText = styled('span')({
   marginLeft: '12px',
 });
 
-const inputStyles = {
-  width: '600px',
+const StyledTextField = styled(TextField)`
+  width: 600px;
 
-  input: {
-    padding: '9px 14px',
+  & input {
+    padding: 9px 14px;
   }
-}
+`
 
 export default function TopControlsBar () {
   return (
@@ -47,10 +47,9 @@ export default function TopControlsBar () {
         <img src={filter} alt="filter" />
         <ButtonText>Filters</ButtonText>
       </StyledButton>
-      <TextField
+      <StyledTextField
         color="orange"
         placeholder="Search for a building..."
-        style={inputStyles}
         slotProps={{
           input: {
             startAdornment: (
