@@ -4,7 +4,9 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material';
 
 const Container = styled(Box)({
-  display: 'flex',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+  gap: '20px',
 })
 
 export default function BuildingsContainer () {
