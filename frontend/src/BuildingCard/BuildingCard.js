@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
+import { orange } from '../constants';
 
 const Props = {
   name: String,
@@ -9,7 +10,7 @@ const Props = {
 }
 
 const NameBox = styled(Box)({
-  backgroundColor: '#ef6c00',
+  backgroundColor: orange,
   borderRadius: '10px',
   bottom: '0px',
   color: 'white',

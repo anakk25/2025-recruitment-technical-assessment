@@ -5,11 +5,12 @@ import TopControlsBar from './TopControlsBar/TopControlsBar.js'
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/system';
 import BuildingsContainer from './BuildingsContainer/BuildingsContainer.js';
+import { orange } from './constants.js';
 
 export const theme = createTheme({
   palette: {
     orange: {
-      main: '#ef6c00',
+      main: orange,
     },
   },
 });

@@ -8,27 +8,28 @@ import filter from '../assets/filter.svg';
 import { ReactComponent as Search } from '../assets/search.svg';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
+import { orange } from '../constants.js';
 
 const Container = styled('div')({
-  height: '60px',
-  margin: '8px 0px',
   display: 'flex',
+  height: '60px',
   justifyContent: 'space-between',
+  margin: '8px 0px',
 });
 
 const StyledButton = styled(Button)({
-  borderWidth: '2px',
-  borderColor: '#ef6c00',
+  borderColor: orange,
   borderRadius: '10px',
-  width: '140px',
+  borderWidth: '2px',
   height: '40px',
+  width: '140px',
 });
 
 const ButtonText = styled('span')({
-  textTransform: 'capitalize',
-  fontWeight: 'bold',
   fontSize: '1rem',
+  fontWeight: 'bold',
   marginLeft: '12px',
+  textTransform: 'capitalize',
 });
 
 const StyledTextField = styled(TextField)`
